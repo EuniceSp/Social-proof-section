@@ -11,7 +11,118 @@ html{
 }
 
 body{
-    width: 100%;
-    height: 100%;
+    min-height: 100vh;
     font-family: 'League Spartan', sans-serif;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50vh 46vh 4vh;
+    grid-template-areas: 
+    "header aside"
+    "main main"
+    "footer footer";
+    background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size: 35%, 75vw 90vh;
+    background-color: hsl(0, 0%, 100%);
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    width: 55%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    font-size: 3rem;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.desc{
+    font-size: 1rem;
+    color: hsl(300, 43%, 22%);
+    font-weight: 500;
+    line-height: 20px;
+}
+
+aside{
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.boxes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.box-gray{
+    width: 60%;
+    height: 18%;
+    background-color:hsl(300, 24%, 96%);
+    margin-bottom: 20px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-gray:nth-child(2){
+    margin-left: 50px;
+}
+
+.box-gray:nth-child(3){
+    margin-left: 100px;
+}
+
+.stars{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-star{
+    margin-left: 8px;
+}
+
+.txt-boxes{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.rated{
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
