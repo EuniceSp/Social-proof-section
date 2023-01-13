@@ -299,7 +299,7 @@ a{
       
       .card-magenta {
         width: 90%;
-        height: 30%;
+        height: 25%;
       }
       
       .card-magenta:nth-child(2){
@@ -311,5 +311,9 @@ a{
       .card-magenta:nth-child(3){
           margin-top: 20px;
       }
+
+      .attribution{
+        font-size: 0.8rem;
+    }
 
 }
